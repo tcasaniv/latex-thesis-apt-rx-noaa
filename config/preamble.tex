@@ -1,0 +1,407 @@
+% Configuración del documento
+
+\renewcommand{\rmdefault}{phv}
+\renewcommand{\sfdefault}{phv}
+%\setlength { \parindent }{ 0pt } % Sin identación inicial
+
+\usepackage{lipsum}
+
+\usepackage{enumitem}
+
+\usepackage[most]{tcolorbox} % Permite crear recuadros/cajas
+\newtcolorbox[]{myindex}[1][]{colframe=black,colback=white,sharp corners,breakable} % Permite la caja que se parte en varias páginas para el índice tentativo
+
+% styling and graphics-based
+\usepackage{graphicx} 
+\usepackage{emptypage}
+% \usepackage{geometry}
+\geometry{%
+  % paper=a4paper,
+  twoside=true, % don't put twoside=false here
+  % left=2.5cm,
+  % right=2.5cm,
+  % top=86.55685pt,
+  % bottom=2.5cm,
+  % headsep=0cm,
+  % headheight=85pt,%84.29048pt,
+  % footskip=35pt,%14.49998pt,
+  % heightrounded=false,
+  % includehead=false,
+  % includefoot=false,
+  % includeheadfoot=false,
+  % includemp=false,
+  % nomarginpar,
+}
+\usepackage{setspace}
+
+\doublespacing
+
+% for figures and tables
+
+% figures:
+\usepackage{subfigure}  
+\usepackage{adjustbox}
+\usepackage{wrapfig}
+\usepackage{subfigure}
+\usepackage{rotating}
+\usepackage{lscape}
+
+
+% tables:
+\usepackage{tabularx,ragged2e,booktabs}
+\usepackage{caption,subcaption}
+\usepackage{multicol,tabularx,capt-of}
+\usepackage{hhline}
+\usepackage{multirow}
+\usepackage{array}
+
+
+% for math equations
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{verbatim}
+\usepackage{amsmath} 
+\usepackage{amsthm}   
+\usepackage{siunitx}
+
+% for acronyms and glossaries
+\usepackage[printonlyused]{acronym}
+\usepackage{glossaries}
+
+
+% % Paquetes para código y algoritmos
+\usepackage{listings}
+
+% Para poder manejar UTF-8, resulta necesario decirle a listings cómo interpretar los caracteres especiales que surjan entre el código fuente, mediante la definición de los mismos.
+\lstset{literate=
+  {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+  {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+  {à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
+  {À}{{\`A}}1 {È}{{\'E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
+  {ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
+  {Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
+  {â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
+  {Â}{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
+  {ã}{{\~a}}1 {ẽ}{{\~e}}1 {ĩ}{{\~i}}1 {õ}{{\~o}}1 {ũ}{{\~u}}1
+  {Ã}{{\~A}}1 {Ẽ}{{\~E}}1 {Ĩ}{{\~I}}1 {Õ}{{\~O}}1 {Ũ}{{\~U}}1
+  {œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1
+  {ű}{{\H{u}}}1 {Ű}{{\H{U}}}1 {ő}{{\H{o}}}1 {Ő}{{\H{O}}}1
+  {ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
+  {€}{{\euro}}1 {£}{{\pounds}}1 {«}{{\guillemotleft}}1
+  {»}{{\guillemotright}}1 {ñ}{{\~n}}1 {Ñ}{{\~N}}1 {¿}{{?`}}1 {¡}{{!`}}1 
+}
+\usepackage{algorithm2e}
+% \usepackage{minted} % Necesita pygmentize
+
+
+
+% % Paquetes para  diagramas
+\usepackage{tikz}
+\usetikzlibrary{external,fit,positioning,arrows,shapes,shadows,trees,mindmap,backgrounds}
+\usepackage{pgf}
+\usepackage{pgffor}
+\usepackage{pgfkeys}
+
+% Paquetes para diagramas UML y circuitos
+\usepackage{uml}
+\usepackage{circuitikz}
+
+% Paquetes para diagramas de Gantt
+\usepackage{pgfgantt}
+
+\tikzstyle{startstop} = [rectangle, rounded corners, 
+minimum width=3cm, 
+minimum height=1cm,
+text centered, 
+draw=black, 
+fill=red!30]
+
+\tikzstyle{io} = [trapezium, 
+trapezium stretches=true, % A later addition
+trapezium left angle=70, 
+trapezium right angle=110, 
+minimum width=3cm, 
+minimum height=1cm, text centered, 
+draw=black, fill=blue!30]
+
+\tikzstyle{process} = [rectangle, 
+minimum width=3cm, 
+minimum height=1cm, 
+text centered, 
+text width=3cm, 
+draw=black, 
+fill=orange!30]
+
+\tikzstyle{decision} = [diamond, 
+minimum width=3cm, 
+minimum height=1cm, 
+text centered, 
+draw=black, 
+fill=green!30]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
+
+
+% Configuración para algoritmos
+\SetAlgoLined
+\SetAlgorithmName{Algoritmo}{Algoritmo}{Lista de Algoritmos}
+
+
+
+% Tipos de columnas para tabularx
+\newcolumntype{L}[1]{>{\RaggedRight\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+
+
+
+
+
+% Configuración para código fuente
+\input{config/listing-code-style.tex}
+
+
+
+
+
+\usepackage[style=ieee,
+backend=biber,
+indexing=cite, 
+% style=alphabetic,
+% bibstyle=authoryear, 
+isbn=false, 
+giveninits=true,
+language=spanish, 
+% natbib=true, 
+maxbibnames=99, 
+maxcitenames=3,
+url=true,
+sorting=ynt
+]{biblatex}
+\addbibresource{references/bibliography.bib}
+
+\DefineBibliographyStrings{english}{%
+  urlfrom = {Available at: },
+}
+\DefineBibliographyStrings{spanish}{%
+  urlfrom = {Disponible en: },
+}
+
+\DeclareFieldFormat{url}{\bibstring{urlfrom}\addcolon\space\url{#1}}
+
+% for hyperlinks
+
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+% \usepackage[hidelinks]{hyperref}
+
+% Definir propiedades del documento
+\hypersetup{
+    pdftitle={\VarTituloTesis},
+    pdfauthor={\VarAutorUno; \VarAutorDos},
+    pdfsubject={\VarDescripcionPDF},
+    pdfkeywords={\VarPalabrasClave}
+}
+
+
+% Cargar sectsty
+% \usepackage{sectsty}
+% \allsectionsfont{\bfseries}
+% \chapterfont{\centering\Large}
+% \sectionfont{\normalsize}
+% \subsectionfont{\normalsize}
+
+\usepackage{titlesec}
+% \titleformat{command}[shape]{format}
+% {label}{sep}{before-code}[after-code]
+
+\ifplanthesis
+\else
+\titleformat{\chapter}[frame]{\normalfont}
+{\filcenter \small \ CAPÍTULO \  \thechapter \ }{7pt}
+{\Large\bfseries\filcenter} %definimos el encabezado para los capitulos
+
+% \titleformat{\section}[block]{}
+% {\filcenter\bfseries Sección \thesection.}{0pt}
+% {\titlerule[1pt] \itshape\fillast}
+% [{\titlerule[1pt]}]
+
+% Formato de los títulos
+% \titleformat{\chapter}
+%   {\centering\Large\bfseries} % Centrado, tamaño grande y negrita
+%   {\thechapter}{1em}{} 
+
+
+\titleformat{\section}
+  {\large\bfseries} % Tamaño normal y negrita
+  {\thesection}{1em}{}
+
+\titleformat{\subsection}
+  {\normalsize\bfseries} % Tamaño normal y negrita
+  {\thesubsection}{1em}{}
+\fi
+
+
+
+
+
+
+\usepackage{pdflscape} % Para cambiar la orientación de la página
+% \usepackage{lscape} % Para cambiar la orientación de la página
+% \usepackage{rotating} % Para girar el contenido de la página
+
+
+
+% Language
+\usepackage{kotex}
+\usepackage[T1]{fontenc}
+\usepackage[english,spanish]{babel}
+\usepackage[autostyle, spanish=mexican]{csquotes}
+\MakeOuterQuote{"}
+% \usepackage [english]{babel}
+% \usepackage [autostyle, english = american]{csquotes}
+% \MakeOuterQuote{"}
+
+
+
+
+% % Configuración de encabezados y pies de página
+% \pagestyle{fancy}
+% \fancyhf{}
+% \fancyhead[LE,RO]{\thepage}
+% \fancyhead[RE]{\leftmark}
+% \fancyhead[LO]{\rightmark}
+% \renewcommand{\headrulewidth}{0.5pt}
+% \renewcommand{\footrulewidth}{0pt}
+
+
+% header formatting
+\usepackage{layout}
+\usepackage{fancyhdr}
+\usepackage[absolute]{textpos} % Permite posiciones absolutas, útil para posters donde cajas deben ir en cierto sitio, o para el encabezado o pie de página
+
+\pagestyle{fancy}
+\fancyhf{} % Limpia los encabezados y pies de página
+\fancyhead[R]{\thepage} % Encabezado derecho
+\fancyhead[L]{\textbf{\nouppercase{\rightmark}}} % Encabezado izquierdo
+% \fancyfoot[C]{\thepage}
+% \fancyfoot[L]{}
+
+% Ajusta el tamaño del encabezado y el margen superior
+\setlength{\headheight}{18pt} % o el valor sugerido en el mensaje de advertencia
+% \addtolength{\topmargin}{-3.26pt} % o el valor sugerido en el mensaje de advertencia
+
+\fancypagestyle{noheaderfooter}{%
+    \fancyhf{} % Limpia los encabezados y pies de página
+    \renewcommand{\headrulewidth}{0pt} % Quitar el grosor de la línea del encabezado
+    \renewcommand{\footrulewidth}{0pt}
+}
+
+
+\fancypagestyle{planthesis}{
+  \fancyhf{} % Limpia los encabezados y pies de página
+  \fancyhead{}
+  \renewcommand{\headrulewidth}{0pt} % Quitar el grosor de la línea del encabezado
+  \renewcommand{\footrulewidth}{0pt}
+  \fancyfoot[C]{\thepage}
+}
+
+
+
+\fancypagestyle{fancybook}{%
+  \fancyhf{}%
+  % Note the ## here. It's required because \fancypagestyle is making a macro (\ps@fancybook).
+  % If we just wrote #1, TeX would think that it's the argument to \ps@fancybook, but
+  % \ps@fancybook doesn't take any arguments, so TeX would complain with an error message.
+  % You are not expected to understand this.
+  \renewcommand*{\sectionmark}[1]{ \markright{\thesection\ ##1} }%
+  \renewcommand*{\chaptermark}[1]{ \markboth{\chaptername\ \thechapter: ##1}{} }%
+  % Increase the length of the header such that the folios 
+  % (typography jargon for page numbers) move into the margin
+  \fancyhfoffset[LE]{6mm}% slightly less than 0.25in
+  \fancyhfoffset[RO]{6mm}%
+  % Put some space and a vertical bar between the folio and the rest of the header
+  \fancyhead[LE]{\thepage\hskip3mm\vrule\hskip3mm\leftmark}%
+  \fancyhead[RO]{\rightmark\hskip3mm\vrule\hskip3mm\thepage}%
+}
+
+\fancypagestyle{custompagestyle}{%
+    \fancyhf{} % Limpia los encabezados y pies de página
+    \fancyhead[R]{\thepage}
+}
+
+% Definir nuevos estilos de página para adaptarse a landscape
+% \fancypagestyle{lscape}{
+%     \fancyhf{} % Limpia los encabezados y pies de página
+%     \fancyhead[R]{\thepage} % Encabezado derecho
+%     \fancyhead[L]{\textbf{\nouppercase{\rightmark}}} % Encabezado izquierdo
+%     \renewcommand{\headrulewidth}{0.4pt} % Grosor de la línea del encabezado
+%     \renewcommand{\footrulewidth}{0pt} % Grosor de la línea del pie de página
+% }
+
+\fancypagestyle{lscape}{%
+    \fancyhf{} % Limpia los encabezados y pies de página
+    
+    \fancyhead[L]{
+        \begin{textblock}{1.5}(1.25,11.5){
+            \rotatebox{90}{
+                \textbf{\nouppercase{\rightmark}}
+            }
+        }\end{textblock}
+        
+        % \begin{textblock}{1}(13,10.5){
+        %     \rotatebox{90}{\thepage}
+        % }\end{textblock}
+    } % Encabezado izquierdo
+    
+    \fancyhead[R]{
+        \begin{textblock}{1.5}(0,1.25){
+            \rotatebox{90}{
+                \thepage
+            }
+        }\end{textblock}
+    } % Encabezado derecho
+    
+    % \fancyfoot[R] {%
+    %     % \begin{textblock}{20}(1,13.25){
+    %     %     \rotatebox{90}{
+    %     %         \textbf{\nouppercase{\rightmark}}
+    %     %     }
+    %     % }\end{textblock}
+        
+    %     \begin{textblock}{1}(13,10.5){
+    %         \rotatebox{90}{
+    %             \thepage
+    %         }
+    %     }\end{textblock}
+    % }
+    \fancyfoot[L]{}
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0pt}
+}
+
+
+%footer formatting
+% \interfootnotelinepenalty=10000 
+
+% \usepackage{epstopdf}
+
+\usepackage{changepage} %Permite cambiar el layout, como en la carátula
+
+
+
+
+%  incluir automáticamente en las referencias cruzadas el nombre de los flotantes referidos (o partes de texto como sección). Así, por ejemplo, no tendrás que escribir la palabra «Figura» delante de cada referencia a una figura. Para usar esta característica habilita el soporte para hyperref e inserta la siguiente línea en el preámbulo LATEX:
+\AtBeginDocument{\renewcommand{\ref}[1]{\mbox{\autoref{#1}}}}
+
+
+\renewcommand{\listtablename}{Índice de tablas}
+\renewcommand{\tablename}{Tabla}
+\renewcommand{\tableautorefname}{Tabla}
+% \addto\extrasspanish{\renewcommand{\tableautorefname}{Tabla \negthinspace}}
+\renewcommand{\figureautorefname}{Figura}
+% \addto\extrasspanish{\renewcommand{\figureautorefname}{Figura \negthinspace}}
+\providecommand\subfigureautorefname{Subfigura}

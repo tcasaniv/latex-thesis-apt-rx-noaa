@@ -1,0 +1,24 @@
+% Componente para mostrar la arquitectura del sistema
+% Uso: \SystemArchitecture{título}{descripción}{ruta-imagen}{etiqueta}
+
+\newcommand{\SystemArchitecture}[4]{
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{#3}
+    \caption{#1: #2}
+    \label{fig:#4}
+  \end{figure}
+}
+
+% Ejemplo de arquitectura creada directamente con TikZ
+\begin{figure}[H]
+  \centering
+  \begin{tikzpicture}[node distance=2cm, auto]
+    % Estilo para capas
+    \tikzstyle{layer}=[rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!20]
+    \tikzstyle{device}=[rectangle, rounded corners, minimum width=2cm, minimum height=0.7cm, text centered, draw=black, fill=green!20]
+    \tikzstyle{cloud}=[rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=gray!20]
+  
+  \end{tikzpicture}
+
+\end{figure}

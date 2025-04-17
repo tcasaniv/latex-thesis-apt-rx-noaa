@@ -1,0 +1,12 @@
+% components/evaluation-table.tex
+% Componente para mostrar resultados de evaluación
+\newcommand{\EvaluationTable}[2]{%
+  % #1: Título o caption
+  % #2: Comando con el contenido de la tabla
+  \begin{table}[ht]
+    \centering
+    \caption{#1}
+    \label{tab:#1}
+    #2
+  \end{table}
+}

@@ -1,0 +1,68 @@
+% Componente para mostrar código fuente en la tesis
+% Uso: \CodeListing{lenguaje}{título}{etiqueta}{ruta-archivo}
+
+\newcommand{\CodeListing}[4]{
+  \begin{figure}[H]
+    \centering
+    \begin{minipage}{0.95\textwidth}
+      \lstinputlisting[
+        language=#1,
+        caption=#2,
+        label=lst:#3
+      ]{#4}
+    \end{minipage}
+    \caption*{Listado de código: #2}
+  \end{figure}
+}
+
+% Uso directo en el documento
+\begin{figure}[H]
+  \centering
+  \begin{minipage}{0.95\textwidth}
+    \begin{lstlisting}[language=JavaScript, caption={Servicio de API para dashboard IoT}, label=lst:api-service]
+// Servicio API para el dashboard IoT
+import axios from 'axios';
+
+export default class IoTService {
+  constructor(baseURL) {
+    this.api = axios.create({
+      baseURL: baseURL || 'https://api.smart-home.example',
+      timeout: 5000,
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      }
+    });
+  }
+
+  // Obtener estado actual de todos los dispositivos
+  async getDeviceStatus() {
+    try {
+      const response = await this.api.get('/devices/status');
+      return response.data;
+    } catch (error) {
+      console.error('Error al obtener estado de dispositivos:', error);
+      throw error;
+    }
+  }
+
+  // Controlar un dispositivo específico
+  async controlDevice(deviceId, command) {
+    try {
+      const response = await this.api.post(`/devices/${deviceId}/control`, {
+        command: command
+      });
+      return response.data;
+    } catch (error) {
+      console.error(`Error al controlar dispositivo ${deviceId}:`, error);
+      throw error;
+    }
+  }
+}
+    \end{lstlisting}
+  \end{minipage}
+  \caption*{Ejemplo de código: Servicio API para Dashboard IoT}
+\end{figure}
+
+% Ejemplo de uso del comando \CodeListing:
+% \CodeListing{Python}{Algoritmo de procesamiento de voz}{voice-processing}{assets/code/voice_processing.py}

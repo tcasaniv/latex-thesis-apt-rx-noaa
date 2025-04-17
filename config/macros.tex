@@ -1,0 +1,147 @@
+% Macros personalizados (similar a componentes en Astro.js)
+% Estos comandos facilitan la reutilización de elementos comunes
+
+
+
+% Niveles de secciones para plan de tesis y tesis final
+% -1 \part{part}
+\newcommand{\planpart}[1]{\ifplanthesis\part*{#1}\else\part{#1}\fi}
+% 0 \chapter{chapter}
+\newcommand{\planchapter}[1]{\ifplanthesis\chapter*{#1}\else\chapter{#1}\fi}
+% 1 \section{section}
+\newcommand{\plansection}[1]{\ifplanthesis\section*{#1}\else\section{#1}\fi}
+% 2 \subsection{subsection}
+\newcommand{\plansubsection}[1]{\ifplanthesis\subsection*{#1}\else\subsection{#1}\fi}
+% 3 \subsubsection{subsubsection}
+\newcommand{\plansubsubsection}[1]{\ifplanthesis\subsubsection*{#1}\else\subsubsection{#1}\fi}
+% 4 \paragraph{paragraph}
+\newcommand{\planparagraph}[1]{\ifplanthesis\paragraph*{#1}\else\paragraph{#1}\fi}
+% 5 \subparagraph{subparagraph}
+\newcommand{\plansubparagraph}[1]{\ifplanthesis\subparagraph*{#1}\else\subparagraph{#1}\fi}
+
+
+
+% Macro para insertar nota al pie con referencia a tecnología
+\newcommand{\tech}[2]{#1\footnote{#2}}
+
+% Macro para destacar términos técnicos
+\newcommand{\termino}[1]{\textbf{#1}}
+
+% Macro para insertar URL como referencia
+\newcommand{\urlref}[2]{\href{#1}{#2}\footnote{\url{#1}}}
+
+% Macro para crear encabezados de sección con número y descripción
+\newcommand{\seccionNumerada}[2]{
+  \section{#1}
+  \textit{#2}
+}
+
+% Macro para texto de código inline
+\newcommand{\codigo}[1]{\texttt{#1}}
+
+% Macro para notas importantes
+\newcommand{\importante}[1]{
+  \begin{tcolorbox}[colback=yellow!10,colframe=red!50!black,title=Importante]
+    #1
+  \end{tcolorbox}
+}
+
+% Macro para tips o consejos
+\newcommand{\tip}[1]{
+  \begin{tcolorbox}[colback=blue!10,colframe=blue!50!black,title=Tip]
+    #1
+  \end{tcolorbox}
+}
+
+% Macro para requisitos
+\newcommand{\requisito}[2]{
+  \textbf{REQ-#1:} #2
+}
+
+% Macro para historias de usuario
+\newcommand{\historia}[3]{
+  \begin{tcolorbox}[colback=green!10,colframe=green!50!black,title=Historia de Usuario]
+    \textbf{ID:} #1 \\
+    \textbf{Como} #2 \textbf{quiero} #3
+  \end{tcolorbox}
+}
+
+% Macro para casos de uso
+\newcommand{\casoUso}[3]{
+  \begin{tcolorbox}[colback=purple!10,colframe=purple!50!black,title=Caso de Uso]
+    \textbf{ID:} #1 \\
+    \textbf{Nombre:} #2 \\
+    \textbf{Descripción:} #3
+  \end{tcolorbox}
+}
+
+% Macro para tecnologías usadas
+\newcommand{\tecnologia}[3]{
+  \begin{tabular}{|p{3cm}|p{9cm}|}
+    \hline
+    \textbf{#1} & #2 \\
+    \hline
+    \multicolumn{2}{|l|}{\small #3} \\
+    \hline
+  \end{tabular}
+}
+
+% Macro para la referencia rápida
+\newcommand{\citar}[1]{\cite{#1}}
+
+% Macro para insertar una figura con caption
+\newcommand{\figura}[4]{
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=#3\textwidth]{#1}
+    \caption{#2}
+    \label{fig:#4}
+  \end{figure}
+}
+
+% Macro para arquitectura del sistema
+\newcommand{\arquitectura}[2]{
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{#1}
+    \caption{Arquitectura del sistema: #2}
+    \label{fig:arquitectura}
+  \end{figure}
+}
+
+% Macro para pseudocódigo
+\newcommand{\pseudo}[2]{
+  \begin{algorithm}[H]
+    \caption{#1}
+    \label{alg:#2}
+    #2
+  \end{algorithm}
+}
+
+% Macro para ecuaciones con descripción
+\newcommand{\ecuacion}[2]{
+  \begin{equation}
+    #1
+    \label{eq:#2}
+  \end{equation}
+}
+
+% Macro para comparativas
+\newcommand{\comparativa}[1]{
+  \begin{table}[H]
+    \centering
+    \caption{Comparativa de alternativas}
+    \begin{tabularx}{\textwidth}{|X|X|X|X|}
+      \hline
+      \textbf{Característica} & \textbf{Opción 1} & \textbf{Opción 2} & \textbf{Opción 3} \\
+      \hline
+      #1
+      \hline
+    \end{tabularx}
+  \end{table}
+}
+
+% Macro para definir acrónimos
+\newcommand{\acronimo}[2]{
+  \textsc{#1} (#2)
+}
