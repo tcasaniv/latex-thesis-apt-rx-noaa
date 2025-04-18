@@ -1,34 +1,38 @@
-\plansection{Cronograma de trabajo}
+\plansection{Cronograma de la investigación}
 
 \begin{figure}[H]
     \centering
     % \includegraphics[width=\linewidth]{Figures/Cronograma.png}
     \begin{ganttchart}[
-        x unit=0.53cm, % Ajusta el ancho de cada unidad de tiempo
-        y unit chart=1cm, % Ajusta la altura de cada tarea
+        x unit=1cm, % Ajusta el ancho de cada unidad de tiempo
+        % y unit chart=1cm, % Ajusta la altura de cada tarea
         vgrid, hgrid,
-        % title/.style={fill=blue!10},
+        title/.style={fill=yellow,draw=black},
         % bar/.style={fill=yellow!100},
-        bar label font=\footnotesize
-        ]{1}{17} % Rango de semanas (10 meses * 4 semanas)
+        bar/.style={fill=yellow,draw=black,text width=3cm},
+        bar label font=\scriptsize
+        ]{1}{15} % Rango de semanas (10 meses * 4 semanas)
     
         % Definir los títulos de los meses numerados
-        \gantttitle{Semanas}{17} \\
+        \gantttitle{Semanas}{15} \\
     
         % Definir los títulos de las semanas numeradas
-        \gantttitlelist{1,...,17}{1} \\
+        \gantttitlelist{1,...,15}{1} \\
     
         % Actividades
-        \ganttbar{Planteamiento del Problema}{1}{3} \\
-        \ganttbar{Revisión del Marco Teórico}{3}{5} \\
-        \ganttbar{Metodología y Planificación}{2}{4} \\
-        \ganttbar{Desarrollo del Proyecto}{5}{8} \\
-        \ganttbar{Resultados y Discusión}{9}{10} \\
-        \ganttbar{Conclusiones y Recomendaciones}{10}{11} \\
-        \ganttbar{Revisión Final y Defensa}{12}{17}
+        \ganttbar[inline=true]{Planteamiento del problema}{1}{4} \\
+        \ganttbar[inline=true]{Marco Teórico}{3}{5} \\
+        \ganttbar[inline=true]{Metodología}{2}{3} \\
+        \ganttbar[inline=true]{Planificación}{2}{4} \\
+        \ganttbar[inline=true]{Desarrollo}{5}{8} \\
+        \ganttbar[inline=true]{Resultados}{9}{10} \\
+        \ganttbar[inline=true]{Discusión}{9}{10} \\
+        \ganttbar[inline=true]{Conclusiones}{10}{10} \\
+        % \ganttbar[inline=true]{Recomendaciones}{10}{11} \\
+        \ganttbar[inline=true]{Revisión Final y Defensa}{11}{15}
     
     \end{ganttchart}
-    \caption{Cronograma de trabajo. Fuente: Elaboración propia}
+    \caption{Cronograma de la investigación. Fuente: Elaboración propia}
     \label{fig:cronograma}
 \end{figure}
 
