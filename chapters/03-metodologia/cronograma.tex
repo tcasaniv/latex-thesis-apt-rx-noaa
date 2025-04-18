@@ -8,9 +8,11 @@
         % y unit chart=1cm, % Ajusta la altura de cada tarea
         vgrid, hgrid,
         title/.style={fill=yellow,draw=black},
-        % bar/.style={fill=yellow!100},
-        bar/.style={fill=yellow,draw=black,text width=3cm},
-        bar label font=\scriptsize
+        bar/.style={fill=yellow!100,draw=black},
+        bar label font=\scriptsize,
+        inline, 
+        bar inline label anchor=west,
+        bar inline label node/.append style={anchor=west, text=black},
         ]{1}{15} % Rango de semanas (10 meses * 4 semanas)
     
         % Definir los títulos de los meses numerados
@@ -20,16 +22,18 @@
         \gantttitlelist{1,...,15}{1} \\
     
         % Actividades
-        \ganttbar[inline=true]{Planteamiento del problema}{1}{4} \\
-        \ganttbar[inline=true]{Marco Teórico}{3}{5} \\
-        \ganttbar[inline=true]{Metodología}{2}{3} \\
-        \ganttbar[inline=true]{Planificación}{2}{4} \\
-        \ganttbar[inline=true]{Desarrollo}{5}{8} \\
-        \ganttbar[inline=true]{Resultados}{9}{10} \\
-        \ganttbar[inline=true]{Discusión}{9}{10} \\
-        \ganttbar[inline=true]{Conclusiones}{10}{10} \\
-        % \ganttbar[inline=true]{Recomendaciones}{10}{11} \\
-        \ganttbar[inline=true]{Revisión Final y Defensa}{11}{15}
+        \ganttbar{Realidad problemática}{1}{3} \\
+        \ganttbar{Planteamiento del problema}{1}{4} \\
+        \ganttbar{Estado del arte}{2}{4} \\
+        \ganttbar{Marco Teórico}{4}{5} \\
+        \ganttbar{Metodología}{2}{3} \\
+        \ganttbar{Planificación}{2}{4} \\
+        \ganttbar{Desarrollo}{5}{8} \\
+        \ganttbar{Resultados}{9}{10} \\
+        \ganttbar{Discusión}{9}{10} \\
+        \ganttbar{Conclusiones}{10}{11} \\
+        % \ganttbar{Recomendaciones}{10}{11} \\
+        \ganttbar{Revisión Final y Defensa}{11}{15}
     
     \end{ganttchart}
     \caption{Cronograma de la investigación. Fuente: Elaboración propia}
