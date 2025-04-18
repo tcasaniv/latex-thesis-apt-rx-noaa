@@ -5,7 +5,8 @@
     % \includegraphics[width=\linewidth]{Figures/Cronograma.png}
     \begin{ganttchart}[
         x unit=1cm, % Ajusta el ancho de cada unidad de tiempo
-        % y unit chart=1cm, % Ajusta la altura de cada tarea
+        y unit chart=0.7cm, % Ajusta la altura de cada tarea
+        y unit title=0.8cm,
         vgrid, hgrid,
         title/.style={fill=yellow,draw=black},
         bar/.style={fill=yellow!100,draw=black},
@@ -13,7 +14,8 @@
         inline, 
         bar inline label anchor=west,
         bar inline label node/.append style={anchor=west, text=black},
-        ]{1}{15} % Rango de semanas (10 meses * 4 semanas)
+        bar height=0.7,
+        ]{1}{15} % Rango de semanas
     
         % Definir los títulos de los meses numerados
         \gantttitle{Semanas}{15} \\
