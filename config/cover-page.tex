@@ -4,10 +4,11 @@
     \begin{center}
         % \vspace{1cm}
         % \bfseries
-        {\fontfamily{phv}\fontsize{14}{14}\selectfont\bfseries
+        \setlength{\parskip}{0pt} % Espacio entre párrafos
+        {\fontfamily{phv}\fontsize{14}{14}\selectfont
         \VarInstitucion \par}
         
-        {\fontfamily{phv}\fontsize{12}{12}\selectfont\bfseries 
+        {\fontfamily{phv}\fontsize{12}{16}\selectfont
         \VarFacultad \par
         \VarEscuela \par}
         
@@ -17,28 +18,24 @@
         
         \vfill\vspace{0.3cm}
         
-        \planthesis{
-            {\fontfamily{phv}\fontsize{14}{16}\selectfont\bfseries{ PLAN DE TESIS }\par}
-        }{
-            % {\fontfamily{phv}\fontsize{14}{16}\selectfont\bfseries{ Título }\par}
-        }
-        
-        {\fontfamily{phv}\fontsize{14}{16}\selectfont{
+        \begin{flushleft}
+        {\fontfamily{phv}\fontsize{12}{10}\selectfont\bfseries{
         \VarTituloTesis
         }\par}
+        \end{flushleft}
     \end{center}
     }
     
     \vfill\vspace{0.3cm}\par
     
     {
-    \fontfamily{phv}\fontsize{12}{12}\selectfont
+    \fontfamily{phv}\fontsize{12}{10}\selectfont
     
     \begin{adjustwidth}{0.52\textwidth}{} % Alinea a la derecha
         
         
         {
-        \noindent Tesis presentada por los Bachilleres:\par
+            \noindent \planthesis{Plan de }{}Tesis presentada por \planthesis{}{el bachiller}:\par
         \noindent \VarAutorUno \par
         \noindent \VarAutorDos \par
         }
@@ -64,7 +61,7 @@
     {
     
     \begin{center}
-        \fontfamily{phv}\fontsize{11}{11}\selectfont
+        \fontfamily{phv}\fontsize{12}{10}\selectfont
         \VarCiudad - \VarPais\par
         \VarAnio\par
     \end{center}
